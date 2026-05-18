@@ -23,7 +23,7 @@ The main advantage of Protobuf over JSON is compact payload size.
 
 JSON is human-readable and widely supported, but it is verbose:
 
-- Repeated field names (the payload has field names)
+- Repeated field name parsing ("userId", "name" every time) 
 - More structural characters (quotes, braces)
 - Thus increasing the payload size
 
