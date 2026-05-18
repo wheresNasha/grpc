@@ -163,6 +163,15 @@ go run grpc_benchmark.go
 
 ![Sample Output](../sampleOutput/Picture30.png)
 
+Note: in the code we have 
+conn, err := grpc.NewClient( "localhost:9400", grpc.WithTransportCredentials(insecure.NewCredentials()), )
+Meaning : OpenSearch is running a gRPC server on port 9400
+Don’t use TLS encryption , insecure.NewCredentials() = plaintext gRPC
+This is good for local dev / benchmarks, but not atall practiced in Prod
+
+Equivalent idea:
+HTTP vs HTTPS difference
+gRPC insecure vs gRPC TLS
 ---
 
 # Final Benchmark Results
