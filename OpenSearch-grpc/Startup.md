@@ -31,7 +31,8 @@ Start OpenSearch using Gradle:
 ```bash
 .\gradlew run
 ```
-![Sample Output](OpenSearch-grpc/sampleOutput/Picture%201.png)
+
+![Sample Output](sampleOutput/picture1.png)
 ---
 
 ## Step 3: Verify REST Server
