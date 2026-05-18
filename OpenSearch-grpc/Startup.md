@@ -31,7 +31,6 @@ Start OpenSearch using Gradle:
 ```bash
 .\gradlew run
 ```
-
 ![Sample Output](sampleOutput/picture1.png)
 ---
 
