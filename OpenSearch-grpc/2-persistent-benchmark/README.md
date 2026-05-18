@@ -174,18 +174,6 @@ go run grpc_benchmark.go
 
 ---
 
-# Performance Difference
-
-## Persistent REST vs Persistent gRPC
-
-### REST:
-**~4.46 ms**
-
-### gRPC:
-**~3.66 ms**
-
----
-
 # Improvement
 
 ## ~18–22% lower latency with gRPC
