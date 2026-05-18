@@ -1,5 +1,3 @@
-# NAIVE_BENCHMARK.md
-
 # Naive Benchmark: REST vs gRPC (CLI-Based)
 
 ## Overview
