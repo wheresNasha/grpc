@@ -47,7 +47,7 @@ curl localhost:9200
 You should receive a JSON response confirming OpenSearch is running.
 
 ```md
-![REST Verification](images/rest-verification.png)
+![REST Verification](sampleOutput/Picture2.png)
 ```
 
 ---
@@ -56,6 +56,7 @@ You should receive a JSON response confirming OpenSearch is running.
 
 ```bash
 dir modules
+![gRPC Modules Verification](sampleOutput/Picture3.png)
 ```
 
 ### Verify:
@@ -74,6 +75,9 @@ Official documentation followed:
 
 [https://docs.opensearch.org/latest/api-reference/grpc-apis/index/#how-to-use-grpc-apis](https://docs.opensearch.org/latest/api-reference/grpc-apis/index/#how-to-use-grpc-apis)
 
+![Reference](sampleOutput/Picture4.png)
+![Reference](sampleOutput/Picture5.png)
+![Reference](sampleOutput/Picture6.png)
 ### Config Path Used:
 
 ```bash
@@ -92,7 +96,7 @@ findstr "grpc" build\testclusters\runTask-0\distro\3.7.0-ARCHIVE\config\opensear
 aux.transport.types: [transport-grpc]
 aux.transport.transport-grpc.port: 9400-9500
 ```
-
+![Reference](sampleOutput/Picture7.png)
 ---
 
 ## Step 6: Verify gRPC Port Binding
@@ -104,7 +108,8 @@ netstat -ano | findstr 9400
 ### Observation:
 
 Initially, the plugin may be installed but the gRPC service may not fully expose the port.
-
+Even after changes the config.yml
+![Reference](sampleOutput/Picture8.png)
 ---
 
 ## Step 7: Recommended Approach (Windows Distro Build)
@@ -116,7 +121,8 @@ Cancel Gradle run, then from repo root:
 ```bash
 .\gradlew :distribution:archives:windows-zip:assemble
 ```
-
+![Reference](sampleOutput/Picture9.png)
+![Reference](sampleOutput/Picture10.png)
 ---
 
 ## Step 8: Navigate to Built Distribution
@@ -132,7 +138,8 @@ cd distribution\archives\windows-zip\build\install\opensearch-3.7.0-SNAPSHOT
 ```bash
 bin\opensearch.bat
 ```
-
+![Reference](sampleOutput/Picture11.png)
+![Reference](sampleOutput/Picture12.png)
 ---
 
 ## Step 10: Confirm gRPC Server Startup
@@ -151,7 +158,7 @@ netstat -ano | findstr 9400
 ```
 
 ### Expected:
-
+![Reference](sampleOutput/Picture16.png)
 ```txt
 TCP    0.0.0.0:9400    LISTENING
 ```
@@ -159,19 +166,19 @@ TCP    0.0.0.0:9400    LISTENING
 ```md
 ![gRPC Running](images/grpc-running.png)
 ```
-
+![Reference](sampleOutput/Picture13.png)
 ---
 
 ## Final Active Endpoints
 
 ### REST
-
+![Reference](sampleOutput/Picture14.png)
 ```txt
 http://localhost:9200
 ```
 
 ### Native Transport
-
+![Reference](sampleOutput/Picture15.png)
 ```txt
 localhost:9300
 ```
@@ -195,7 +202,7 @@ curl http://localhost:9200
 A full OpenSearch JSON server response confirming successful setup.
 
 ```md
-![Final REST Check](images/final-rest-check.png)
+![Reference](sampleOutput/Picture2.png)
 ```
 
 ---
