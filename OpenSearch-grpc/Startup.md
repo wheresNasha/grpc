@@ -45,27 +45,16 @@ curl localhost:9200
 ### Expected Output:
 
 You should receive a JSON response confirming OpenSearch is running.
-
-```md
 ![REST Verification](sampleOutput/Picture2.png)
-```
 
 ---
 
 ## Step 4: Check gRPC Modules
-
+Ensure gRPC-related modules are present.
 ```bash
 dir modules
+```
 ![gRPC Modules Verification](sampleOutput/Picture3.png)
-```
-
-### Verify:
-
-Ensure gRPC-related modules are present.
-
-```md
-![gRPC Modules](images/grpc-modules.png)
-```
 
 ---
 
@@ -158,37 +147,29 @@ netstat -ano | findstr 9400
 ```
 
 ### Expected:
-![Reference](sampleOutput/Picture16.png)
-```txt
-TCP    0.0.0.0:9400    LISTENING
-```
-
-```md
-![gRPC Running](images/grpc-running.png)
-```
 ![Reference](sampleOutput/Picture13.png)
 ---
 
 ## Final Active Endpoints
 
 ### REST
-![Reference](sampleOutput/Picture14.png)
 ```txt
 http://localhost:9200
 ```
+![Reference](sampleOutput/Picture15.png)
 
 ### Native Transport
-![Reference](sampleOutput/Picture15.png)
 ```txt
 localhost:9300
 ```
+![Reference](sampleOutput/Picture14.png)
 
 ### gRPC
 
 ```txt
 localhost:9400
 ```
-
+![Reference](sampleOutput/Picture16.png)
 ---
 
 ## Step 11: Final REST Validation
