@@ -27,8 +27,10 @@ Full reproducible commands are available in:
 A shared benchmark dataset was created to ensure both REST and gRPC queries operated against the same OpenSearch index and documents.
 
 ### Included:
-- Benchmark index creation
+- Benchmark index creation 
+![Sample Output](../sampleOutput/picture17.png)
 - Sample document insertion
+![Sample Output](../sampleOutput/picture18.png)
 - Controlled search target
 
 ---
@@ -39,8 +41,11 @@ REST benchmarking was performed using:
 
 - `curl`
 - PowerShell `Measure-Command`
+![Sample Output](../sampleOutput/picture19.png)
 - repeated warm queries
+![Sample Output](../sampleOutput/picture20.png)
 
+![Sample Output](../sampleOutput/picture21.png)
 ### Purpose:
 To establish:
 - cold-start latency
@@ -54,6 +59,9 @@ To establish:
 gRPC benchmarking was performed using:
 
 - `grpcurl`
+Install using : https://github.com/fullstorydev/grpcurl/releases<img width="468" height="24" alt="image" src="https://github.com/user-attachments/assets/c5521228-04ca-4b42-a70a-a824ee0b4fb4" />
+
+![Sample Output](../sampleOutput/picture22.png)
 - protobuf reflection
 - equivalent search query
 - repeated warm runs
@@ -71,12 +79,12 @@ To compare:
 ### REST
 - Cold requests showed significantly higher startup latency
 - Warm repeated requests stabilized substantially
-
+![Sample Output](../sampleOutput/picture21.png)
 ### gRPC
 - Functional parity with REST was achieved
 - CLI-based gRPC showed higher average latency in this setup
 - grpcurl overhead materially impacted results
-
+![Sample Output](../sampleOutput/picture23.png)
 ---
 
 ## Observed Environment-Specific Results
@@ -152,12 +160,3 @@ But deeper benchmarking is required to fairly isolate:
 - protocol efficiency
 - serialization cost
 - scalability behavior
-
----
-
-## Supporting Output
-
-Include benchmark screenshots throughout this document:
-
-```md
-![Sample Output](../sampleOutput/picture1.png)
