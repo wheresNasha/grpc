@@ -140,15 +140,16 @@ Started gRPC server on port PortsRange{portRange='9400-9500'}
 publish_address {127.0.0.1:9400}, bound_addresses {0.0.0.0:9400}
 ```
 
+### Expected:
+![Reference](sampleOutput/Picture13.png)
+---
+
 ### Port Verification:
 
 ```bash
 netstat -ano | findstr 9400
 ```
-
-### Expected:
-![Reference](sampleOutput/Picture13.png)
----
+![Reference](sampleOutput/Picture16.png)
 
 ## Final Active Endpoints
 
@@ -169,7 +170,7 @@ localhost:9300
 ```txt
 localhost:9400
 ```
-![Reference](sampleOutput/Picture16.png)
+![Reference](sampleOutput/Picture13.png)
 ---
 
 ## Step 11: Final REST Validation
@@ -177,14 +178,9 @@ localhost:9400
 ```bash
 curl http://localhost:9200
 ```
-
 ### Expected:
-
 A full OpenSearch JSON server response confirming successful setup.
-
-```md
 ![Reference](sampleOutput/Picture2.png)
-```
 
 ---
 
